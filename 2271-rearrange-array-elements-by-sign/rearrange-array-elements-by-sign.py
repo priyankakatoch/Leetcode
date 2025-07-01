@@ -6,13 +6,9 @@ class Solution:
         for i in range (0,n):
             if nums[i]>0:
                 pos.append(nums[i])
-            else:
+            else :
                 neg.append(nums[i])
-
-        result = []
-
         for i in range (0,len(pos)):
-            result.append(pos[i])
-            result.append(neg[i])
-        return result
-        
+            nums[2*i] = pos[i]
+            nums[2*i+1] = neg[i]
+        return nums        
